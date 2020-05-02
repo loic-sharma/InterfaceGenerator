@@ -9,13 +9,13 @@ class Program
     {
         IFoo x = new Foo();
 
-        x.Test("test");
+        x.Bar("test");
     }
 }
 
 public class Foo : IFoo
 {
-    public void Test(string name)
+    public void Bar(string name)
     {
         Console.WriteLine($"Hello {name}");
     }
