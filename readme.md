@@ -27,6 +27,6 @@ The generator will automatically create `IFoo`:
 ```csharp
 public interface IFoo
 {
-    void Bar(string test);
+    void Bar(string name);
 }
 ```
