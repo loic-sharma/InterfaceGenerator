@@ -37,9 +37,10 @@ namespace InterfaceGenerator
             ClassDeclarationSyntax classDeclaration,
             string interfaceName)
         {
+            // Determine if the class declaration implements an interface that should be generated.
             foreach (var baseTypeSyntax in classDeclaration.BaseList.Types)
             {
-                // Skip base types that aren't prefixed by "I".
+                // Check the name of the interface.
                 if (!(baseTypeSyntax.Type is IdentifierNameSyntax baseName))
                 {
                     continue;
@@ -50,7 +51,7 @@ namespace InterfaceGenerator
                     continue;
                 }
 
-                // Skip base types that exist.
+                // Check that the interface does not exist.
                 var baseTypeInfo = model.GetTypeInfo(baseTypeSyntax.Type);
 
                 return baseTypeInfo.Type.TypeKind == TypeKind.Error;

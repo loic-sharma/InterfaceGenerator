@@ -1,6 +1,6 @@
 # Interface Generator
 
-This is an experimental project that uses [C# Source Generators](https://devblogs.microsoft.com/dotnet/introducing-c-source-generators/) to automatically generate the interface for a class. For example:
+This is an toy project that uses [C# Source Generators](https://devblogs.microsoft.com/dotnet/introducing-c-source-generators/) to automatically generate the interface for a class. For example:
 
 ```csharp
 class Program
