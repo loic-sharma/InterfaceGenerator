@@ -6,13 +6,10 @@
     <LangVersion>preview</LangVersion>
   </PropertyGroup>
 
-  <!-- Add this as a new ItemGroup, replacing paths and names appropriately -->
   <ItemGroup>
-    <Analyzer Include="$(OutDir)\..\..\..\..\InterfaceGenerator\bin\$(Configuration)\netstandard2.0\InterfaceGenerator.dll" />
+    <ProjectReference Include="..\InterfaceGenerator\InterfaceGenerator.csproj" 
+                      OutputItemType="Analyzer"
+                      ReferenceOutputAssembly="false" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\InterfaceGenerator\InterfaceGenerator.csproj" />
-  </ItemGroup>
-	
 </Project>
